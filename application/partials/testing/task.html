@@ -1,0 +1,22 @@
+<div class="">
+<h2>Проверка знаний</h2>
+
+<form name="example" novalidate>
+    <div class="example">
+        <p>Question: {{question}}</p>
+        <input type="text"
+               name="answer" placeholder="answer"
+               ng-model="answer"
+               natural-number class="form-control" />
+        <span ng-show="example.answer.$error.naturalNumber">Ввод не верный. Введите натуральное число!</span>
+        <br>
+        <input type="submit"
+               ng-click="sendAnswer(answer)"
+               ng-disabled="example.answer.$dirty && example.answer.$invalid"
+               value="Send" class="btn btn-default">
+    </div>
+
+    <div class="count-answer">Правильных ответов <span id="correct-answer">{{correctAnswersCount}}</span></div>
+    <div class="count-answer">Неправильных ответов <span id="incorrect-answer">{{incorrectAnswersCount}}</span></div>
+</form>
+</div>

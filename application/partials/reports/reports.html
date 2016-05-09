@@ -1,0 +1,13 @@
+<div>
+    <label for="from">From:</label>
+    <input type="date" ng-model="from.value" id="from" class="form-control" />
+    <label for="from">Until:</label>
+    <input type="date" ng-model="until.value" id="until" class="form-control" />
+</div>
+
+<div class="list-group">
+    <a href="#reports/tested_students" class="list-group-item">Show students that have been tested for the period</a>
+    <a href="#reports/not_tested_students" class="list-group-item">Show the students, never for a period not tested</a>
+    <a href="#reports/poor_students" class="list-group-item">Students are tested at least three times during the period,
+        the result of which did not exceed 50%</a>
+</div>
